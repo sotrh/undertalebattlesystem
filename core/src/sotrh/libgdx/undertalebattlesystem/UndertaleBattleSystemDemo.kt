@@ -16,22 +16,24 @@ class UndertaleBattleSystemDemo : ApplicationAdapter() {
     override fun create() {
         batch = SpriteBatch()
         player = Player(Texture("sprites/heart.png"))
+        player.center()
     }
 
     override fun render() {
         if (Gdx.input.isKeyJustPressed(Input.Keys.ESCAPE)) Gdx.app.exit()
 
         val delta = Gdx.graphics.deltaTime
-        if (Gdx.input.isKeyPressed(Input.Keys.W)) player.sprite.y += delta.toPixels()
-        if (Gdx.input.isKeyPressed(Input.Keys.A)) player.sprite.x -= delta.toPixels()
-        if (Gdx.input.isKeyPressed(Input.Keys.S)) player.sprite.y -= delta.toPixels()
-        if (Gdx.input.isKeyPressed(Input.Keys.D)) player.sprite.x += delta.toPixels()
+        val speed = delta.toPixels()
+        if (Gdx.input.isKeyPressed(Input.Keys.W)) player.y += speed
+        if (Gdx.input.isKeyPressed(Input.Keys.A)) player.x -= speed
+        if (Gdx.input.isKeyPressed(Input.Keys.S)) player.y -= speed
+        if (Gdx.input.isKeyPressed(Input.Keys.D)) player.x += speed
 
         Gdx.gl.glClearColor(0f, 0f, 0f, 1f)
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT)
 
         batch.begin()
-        player.sprite.draw(batch)
+        player.draw(batch)
         batch.end()
     }
 
