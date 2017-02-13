@@ -1,8 +1,10 @@
-package sotrh.libgdx.undertalebattlesystem
+package sotrh.libgdx.undertalebattlesystem.entity
 
 import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer
+import sotrh.libgdx.undertalebattlesystem.entity.Player
+import sotrh.libgdx.undertalebattlesystem.common.gdxArrayOf
 
 /**
  * Created by benjamin on 2/9/17

@@ -1,4 +1,4 @@
-package sotrh.libgdx.undertalebattlesystem
+package sotrh.libgdx.undertalebattlesystem.common
 
 /**
  * Created by benjamin on 2/7/17

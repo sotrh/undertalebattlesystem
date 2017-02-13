@@ -1,4 +1,4 @@
-package sotrh.libgdx.undertalebattlesystem
+package sotrh.libgdx.undertalebattlesystem.common
 
 import com.badlogic.gdx.utils.Array
 
